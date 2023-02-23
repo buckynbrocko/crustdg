@@ -1,0 +1,23 @@
+match_block_trailing_comma = true
+use_field_init_shorthand = true
+reorder_modules = true
+merge_derives = false
+# where_single_line = true
+
+
+
+# Note: use `#[rustfmt::skip]` macro to skip inline items
+# To disable formatting a specific attribute/macro globally use:
+#   #[rustfmt::skip::macros(target_macro_name)]
+#   #[rustfmt::skip::attributes(target_attribute_name)]
+
+
+
+### Unstable/Nightly-only Features:
+
+# group_imports = "StdExternalCrate"
+# imports_layout = "vertical"
+# imports_granularity = "Item"
+# reorder_impl_items = true
+# trailing_comma = "Always"
+# hex_literal_case = "Upper"
