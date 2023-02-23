@@ -2,7 +2,12 @@
 name = "crustdg"
 version = "0.1.0"
 edition = "2021"
-description = "A CD+G"
+description = "Parser for CD+G data"
+repository = "https://github.com/buckynbrocko/crustdg"
+
+author = "Bucky"
+license = "unlicense"
+keywords = ["karaoke", "CDG", ".cdg"]
 
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html

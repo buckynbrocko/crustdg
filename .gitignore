@@ -10,3 +10,7 @@ Cargo.lock
 **/*.rs.bk
 cdgparsev1s.c
 cdgtextv1.c
+output.txt
+blogtext.cdg
+src/syntactical.rs
+src/syntax_playground.rs
