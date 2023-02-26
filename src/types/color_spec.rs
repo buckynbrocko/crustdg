@@ -1,17 +1,51 @@
+use hex::encode;
+
 // use crate::bitmask::*;
 use crate::bitmask::functions::BitMaskFunctions;
 use crate::types::subcode::SubCodeData;
 
-type ColorTable = [ColorSpec; 8];
+pub type ColorTable = [ColorSpec; 8];
 
 #[derive(Debug, Clone, Copy)]
 pub struct ColorSpec {
-    pub red: u8,
-    pub green: u8,
-    pub blue: u8,
+    red: u8,
+    green: u8,
+    blue: u8,
+}
+
+pub fn all_black() -> ColorTable {
+    [ColorSpec::black(); 8]
 }
 
 impl ColorSpec {
+    pub fn colors(self) -> [u8; 3] {
+        [self.red, self.green, self.blue]
+    }
+
+    pub fn as_hex(self) -> String {
+        let hexes = hex::encode_upper(self.colors().map(|b| 17 * b));
+        format!("#{}", hexes)
+    }
+
+    pub fn set_red(mut self, value: u8) -> ColorSpec {
+        self.red = value.lower_nybble();
+        self
+    }
+
+    pub fn set_green(mut self, value: u8) -> ColorSpec {
+        self.green = value.lower_nybble();
+        self
+    }
+
+    pub fn set_blue(mut self, value: u8) -> ColorSpec {
+        self.blue = value.lower_nybble();
+        self
+    }
+
+    pub fn black() -> ColorSpec {
+        ColorSpec::from((0, 0, 0))
+    }
+
     pub fn table(data: SubCodeData) -> ColorTable {
         let mut vector: Vec<ColorSpec> = Vec::new();
         for index in 0..data.len() {
@@ -21,6 +55,17 @@ impl ColorSpec {
             }
         }
         vector.try_into().unwrap()
+    }
+}
+
+impl From<(u8, u8, u8)> for ColorSpec {
+    fn from(colors: (u8, u8, u8)) -> ColorSpec {
+        let (red, green, blue) = colors;
+        ColorSpec {
+            red: red.lower_nybble(),
+            green: green.lower_nybble(),
+            blue: blue.lower_nybble(),
+        }
     }
 }
 

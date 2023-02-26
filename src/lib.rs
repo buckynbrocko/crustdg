@@ -1,4 +1,6 @@
 mod bitmask;
+#[allow(unused)]
+mod cdg_display;
 mod commands;
 pub mod syntactical;
 mod types;
