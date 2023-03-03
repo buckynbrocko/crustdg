@@ -12,7 +12,7 @@ Based on the following sources:
 ## Using crustdg As A Dependency
 
 ```shell
-cargo add --git "https://github.com/buckynbrocko/crustdg"
+$ cargo add --git "https://github.com/buckynbrocko/crustdg"
 ```
 
 or

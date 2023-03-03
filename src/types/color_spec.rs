@@ -1,8 +1,7 @@
-use hex::encode;
-
 // use crate::bitmask::*;
 use crate::bitmask::functions::BitMaskFunctions;
 use crate::types::subcode::SubCodeData;
+use hex;
 
 pub type ColorTable = [ColorSpec; 8];
 
