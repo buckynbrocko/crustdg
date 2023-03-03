@@ -1,4 +1,5 @@
 mod bitmask;
+#[allow(unused)]
 mod commands;
 pub mod syntactical;
 mod types;
