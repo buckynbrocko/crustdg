@@ -2,6 +2,7 @@ mod bitmask;
 #[allow(unused)]
 mod cdg_display;
 mod commands;
+mod player;
 pub mod syntactical;
 mod types;
 

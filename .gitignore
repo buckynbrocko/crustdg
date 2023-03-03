@@ -18,3 +18,4 @@ blogtext.cdg
 src/syntactical.rs
 src/syntax_playground.rs
 scripts/scratch
+.config

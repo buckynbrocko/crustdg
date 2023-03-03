@@ -9,6 +9,20 @@ Based on the following sources:
 * [CD+G Revealed](https://jbum.com//cdg_revealed.html)
 * [Tech Flashback: The CD+Graphics Format (CD+G)](https://goughlui.com/2019/03/31/tech-flashback-the-cdgraphics-format-cdg/)
 
+## Using crustdg As A Dependency
+
+```shell
+cargo add --git "https://github.com/buckynbrocko/crustdg"
+```
+
+or
+
+```toml
+# Cargo.toml
+[dependencies]
+crustdg = { git = "https://github.com/buckynbrocko/crustdg", branch = "main"}
+```
+
 ## TODOs
 
 * [x] Implement Parser
